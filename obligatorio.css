@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+:root {
+    --font-Anton: "Anton", sans-serif;
+    --negro: #000000;
+    --blanco: #FFFFFF;
+    --rojo-claro: #FF4439;
+    --verde-claro: #00AE99;
+    --violeta: #DBAFE0;
+    
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-Anton);
+    /* Para que el sistema de navegación sea mas amigable y no de un salto: */
+    scroll-behavior: smooth;
+}
+ 
+img {
+    width: 100%;
+} 
+
+.container {
+    min-width: 1200px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.containerCenter {
+    min-width: 1200px;
+    max-width: 1440px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--negro);
+}
+
+header img {
+    width: 50%;
+    margin-left: 32px;
+}
+
+header nav ul {
+    display: flex;   
+    list-style: none;  
+    font-size: 18px;
+    margin: 32px;
+}
+
+header nav ul li a {
+    margin-left: 24px;
+    text-decoration: none;
+    color: var(--blanco);
+}
+
+header nav ul li a:hover {
+    color: var(--rojo-claro);
+    border-bottom: 1px solid var(--rojo-claro);
+}
+
+h2 {
+    font-size: 40px;
+    padding-top: 64px; 
+}
+
+p {
+    font-size: 16px;
+}
+
+/* Sección bienvenido: */
+
+#bienvenido {
+    padding: 100px;
+}
+
+#bienvenido p {
+    font-size: 20px;
+}
+
+#bienvenido div.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 200px;
+}
+
+#bienvenido div.textoInicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#bienvenido img {
+    width: 90%;
+}
+
+#bienvenido h1 {
+    font-size: 50px;
+    padding-bottom: 32px;
+}
+
+
+#bienvenido nav ul { 
+    display: flex;
+    flex-direction: row;
+    list-style: none;  
+    padding-top: 60px;
+    align-items: left;
+    font-size: 20px;
+}
+
+#bienvenido nav ul li a {
+    margin-left: 10px;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+#bienvenido nav ul li a:hover {
+    color: yellow;
+}
+
+#bienvenido nav ul li .aDistinto {
+    background-color: #000000;
+    color: white;
+    padding: 10px 32px;
+}
+
+#bienvenido nav ul li a.aDistinto:hover{
+    color: red;
+}
+
+
+/* Sección 1 */
+
+#section1 {
+    background-color: var(--negro);
+    padding: 145px;
+}
+
+#section1 h2,
+#section1 p {
+    color: var(--blanco);
+}
+
+
+#section1 p,
+#section2 p,
+#section4 p {
+    padding-top: 10px;
+    padding-bottom: 40px;
+    font-size: 20px;
+} 
+
+.articulosFechas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 100px;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.articulosFechas article {  
+    padding: 100px;
+    background-color: var(--blanco);
+}
+
+.articulosFechas article:first-child{
+    background-color: var(--violeta);
+}
+
+.articulosFechas article:nth-child(2){
+    background-color: var(--verde-claro);
+}
+
+.articulosFechas article:last-child{
+    background-color: var(--violeta);
+}
+
+#section1 h3{
+    font-size: 40px;
+    padding-bottom: 10px;
+}
+
+#section1 h4{
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+
+/* Diseño de VER ARTISTAS */
+
+#section1 nav ul li {
+    list-style: none;
+}
+
+#section1 nav ul li a {
+    font-size: 20px;
+    padding: 10px 30px;
+    border: 1px solid black;
+    background-color: var(--negro);
+    text-decoration: none;
+    color: var(--blanco);
+}
+
+#section1 nav ul li a:hover {
+    color: yellow;
+}
+
+/* Sección 2 */
+
+ #section2 {
+    padding-bottom: 200px;
+}     
+
+#section2 h2 + p {
+    font-size: 20px;
+}
+
+#section2 p {
+    font-size: 15px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 300px);
+    grid-gap: 16px;
+    padding-top: 60px;
+}
+
+.galeria article {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: var(--blanco);
+    font-size: 20px;
+}
+
+.galeria article:first-child {
+    background-image: url(img/img4.jpg);
+    grid-row: 3 span;
+    background-size: cover; 
+}
+
+.galeria article:nth-child(2){
+    background-image: url(img/img5.jpg);
+    background-size: cover;
+}
+
+.galeria article:nth-child(3) {
+    background-image: url(img/img2.jpg);
+    grid-column: 2 span;
+    background-size: cover;
+    color: var(--negro);
+}
+
+
+.galeria article:nth-child(4) {
+    background-image: url(img/img6.jpeg);
+    grid-column: 2 span;
+    background-size: cover;
+}
+.galeria article:nth-child(5) {
+    background-image: url(img/img7.jpg);    
+    grid-row: 2 span; 
+    background-size: cover;
+}
+.galeria article:nth-child(6){
+    background-image: url(img/img3.jpg);
+    background-size: cover;
+    
+}
+
+.galeria article:nth-child(7){
+    background-image: url(img/img8.jpg);
+    background-size: cover;
+}
+
+/* Sección 3 */
+
+#section3 {
+    background-color: var(--rojo-claro);  
+}
+
+#section3 h2 + p:first-of-type {
+    padding-top: 10px;
+    padding-bottom: 60px;
+    font-size: 20px;
+}
+
+
+.articulosEntradas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 40px;
+    grid-gap: 40px;
+}
+
+
+.articulosEntradas article:first-child,
+.articulosEntradas article:last-child {
+    background-color: var(--blanco);
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 32px; 
+}
+
+.articulosEntradas article:nth-child(2){
+    background-color: var(--blanco);
+    padding: 32px; 
+}
+
+.articulosEntradas h3 {
+    font-size: 32px;
+    padding-bottom: 16px;
+}
+
+.articulosEntradas p:nth-child(3) {
+    font-size: 32px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+/* parte lista */
+
+.articulosEntradas ul {
+    list-style: none;
+    font-size: 16px;
+}
+
+/* articulo 1, 2 y 3 - elemento 1 y 2*/
+.articulosEntradas article li:nth-child(1),
+.articulosEntradas article li:nth-child(2){
+    list-style-image: url(img/tickSVG\ \(2\).svg);
+} 
+
+/* articulo 1 - elemento 3 y 4 */
+.articulosEntradas article:nth-child(1) li:nth-child(3){
+    list-style-image: url(img/x\ \(1\).svg);
+}
+.articulosEntradas article:nth-child(1) li:nth-child(4){
+    list-style-image: url(img/x\ \(1\).svg);
+    padding-bottom: 60px;
+}
+
+.articulosEntradas article:nth-child(1) li:nth-child(4){
+    list-style-image: url(img/x\ \(1\).svg);
+    
+}
+
+/* articulo 2 - elemento 3 y 4 */
+.articulosEntradas article:nth-child(2) li:nth-child(3){
+    list-style-image: url(img/tickSVG\ \(2\).svg);
+} 
+.articulosEntradas article:nth-child(2) li:nth-child(4){
+    list-style-image: url(img/x\ \(1\).svg);
+    padding-bottom: 150px;
+}
+
+/* articulo 3 - elemento 3 y 4 */
+.articulosEntradas article:nth-child(3) li:nth-child(3){
+    list-style-image: url(img/tickSVG\ \(2\).svg);
+} 
+.articulosEntradas article:nth-child(3) li:nth-child(4){
+    list-style-image: url(img/tickSVG\ \(2\).svg);
+    padding-bottom: 80px;
+} 
+
+.articulosEntradas ul li {
+    margin-bottom: 16px;
+}
+
+/* parte boton */
+
+#btnSeleccionar {
+    font-size: 16px;
+    width: 100%;
+    padding: 8px;  
+    background-color: var(--blanco);
+    font-weight: bold;
+    border: 2px solid black;  
+}
+
+#btnSeleccionar:hover {
+    color: #FF4439;
+}
+
+
+/* parte VIP */
+
+.article2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+}
+
+.article2 p { 
+    font-size: 13px;
+    color: var(--blanco);
+    background-color: red;
+    padding: 5px 10px;
+    margin: 20px;
+    border-radius: 16px;
+}
+
+/* parte formulario */
+
+form .campoFormulario {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+} 
+
+#section3 form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+    padding-bottom: 64px;
+    padding-top: 60px;
+} 
+
+#txtNombre {
+    padding: 8px;
+}
+
+#txtEmail {
+    padding: 8px;
+}
+
+#btnPagar {
+    font-size: 16px;
+    margin-top: 31px;
+    height: 40px;
+    background-color: var(--blanco);
+    border: 2px solid var(--negro); 
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+#btnPagar:hover{
+    color: var(--rojo-claro);
+}
+
+/* Sección 4 */
+
+#section4 {
+    padding: 40px;
+}
+
+#section4 table {
+    width: 100%;
+    border: 1px solid grey; 
+    border-collapse: collapse;
+    font-size: 20px;
+}
+
+#section4 table th,
+#section4 table td {
+    text-align: left;
+    padding: 24px 16px;
+}
+
+#section4 table th {
+    background-color: #32c3e2;
+    color: var(--negro);
+}
+
+#section4 table tr:nth-child(odd){
+    background-color: var(--violeta);
+}
+
+#section4 table tr:nth-child(even){
+    background-color: var(--verde-claro);
+}
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    background-color: #000000;
+    margin-top: 64px;
+}
+
+footer img {
+    width: 50%;
+    margin-left: 32px;
+    padding: 16px;
+}
+
+footer p a {
+    text-decoration: none;
+    color: var(--blanco);
+    margin: 16px;
+}
+
+footer p a:hover {
+    color: yellow;
+}
+
+
+
